@@ -1,72 +1,14 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-function renderLicenseBadge(license, data) {
-  let mitLicense = `MIT License
-  
-  Copyright (c) 2023 ${data}
-  
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to deal
-  in the Software without restriction, including without limitation the rights
-  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-  
-  The above copyright notice and this permission notice shall be included in all
-  copies or substantial portions of the Software.
-  
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-  SOFTWARE.`
-
-  if(license == 'Yes') {
-    const fs = require('fs');
-    fs.writeFile('LICENSE', mitLicense, (err) =>
-    err ? console.error(err) : console.log('Success!')
-  ) 
-    return '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
-  } else {
-    return ''
-  } 
-}
-
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {
-  if(license == 'Yes') {
-    return '[MIT License Link](LICENSE)'
-  } else {
-    return ''
-  } 
-}
-
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {
-  if(license == 'Yes') {
-  return 'This file has an MIT License. Check out the linked license below for more details:'
-  } else {
-    return ''
-  }  
-}
-
-// TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
-  return `# ${data.title} ${renderLicenseBadge(data.license, data.fullname)}
+# g [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
   ## Description
 
 ### Project Motivation & Purpose
 
-${data.motivation}
+e
 
 ### What I Learned Making This Project
 
-${data.learned}
+r
 
 ## Table of Contents
 
@@ -80,15 +22,15 @@ ${data.learned}
 
 ## Installation
 
-${data.installation}
+g
 
 ## Usage
 
-${data.usage}
+e
 
-## Contributing
+## Contribute
 
-${data.contributing}
+e
 
 ### Contributor Covenant Code of Conduct
 
@@ -225,25 +167,21 @@ For answers to common questions about this code of conduct, see the FAQ at
   
 ## Tests
 
-${data.tests}
+f
 
 ## Questions
 
-If you have questions about this project, you can find my GitHub profile (@${data.username}) at the link below:
+If you have questions about this project, you can find my GitHub profile (@e) at the link below:
 
-https://github.com/${data.username}
+https://github.com/e
 
 If you would like to communicate with me outside of Github, please send me an email at the following address:
 
-[${data.email}](${data.email})
+[d](d)
 
 ## License
 
-${renderLicenseSection(data.license)}
+This file has an MIT License. Check out the linked license below for more details:
 
-${renderLicenseLink(data.license)}
-  `;
+[MIT License Link](LICENSE)
   
-}
-
-module.exports = generateMarkdown;
