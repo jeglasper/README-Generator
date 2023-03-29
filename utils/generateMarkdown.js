@@ -46,8 +46,13 @@ function renderLicenseLink(license) {
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
-
+function renderLicenseSection(license) {
+  if(license == 'Yes') {
+  return 'This file has an MIT License. Check out the linked license below for more details:'
+  } else {
+    return ''
+  }  
+}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
@@ -230,9 +235,11 @@ https://github.com/${data.username}
 
 If you would like to communicate with me outside of Github, please send me an email at the following address:
 
-${data.email}
+[${data.email}](${data.email})
 
 ## License
+
+${renderLicenseSection(data.license)}
 
 ${renderLicenseLink(data.license)}
   `;
