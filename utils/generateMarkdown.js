@@ -76,7 +76,7 @@ ${data.learned}
 
 [Usage](#usage)
 
-[How to Contribute](#constribute)
+[Contributing](#contributing)
 
 [Tests](#tests)
 
