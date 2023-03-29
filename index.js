@@ -67,7 +67,7 @@ function init() {
     .prompt(questions)
     .then((data) => {
         console.log(data);
-        const fileName = `README.md`;
+        const fileName = `Sample_README.md`;
         console.log(fileName);
         writeToFile(fileName, data);
     })
