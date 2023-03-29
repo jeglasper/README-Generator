@@ -22,7 +22,7 @@ Please use the links below to access the Github Repository as well as the walkth
 
 GitHub Repository: https://github.com/jeglasper/README-Generator
 
-Walkthrough Video:
+Walkthrough Video: https://drive.google.com/file/d/1ZYojiH5ey5VeNDPtgS-R_2jd5eYnj11k/view or [Video in Repository](README-Generator%20Functionality%20Walkthrough.mp4)
 
 ## Credits
 
