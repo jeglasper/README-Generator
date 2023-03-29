@@ -19,6 +19,11 @@ const questions = [
         message: "Description: What did you learn from creating this project?", 
         name: 'learned',
     }, {
+        type: 'checkbox',
+        message: "Table of Contents - Please list all of the sections included in your README:",
+        choices: ['Installation', 'Usage', 'Licence', 'Contributors', 'Tests', 'Questions'],
+        name: 'tableOfContents',
+    }, {
         type: 'input',
         message: "Installation: What are the steps required to install your project?", 
         name: 'installation',
@@ -54,7 +59,15 @@ const questions = [
 function writeToFile(fileName, data) {}
 
 // TODO: Create a function to initialize app
-function init() {}
-
+function init() {  
+    inquirer
+    .prompt(questions)
+    .then((data) => {
+        console.log(data);
+        const fileName = `${data.title.toLowerCase().split(' ').join('')}_README.md`;
+        console.log(fileName);
+        writeToFile(fileName, data);
+    })
+}
 // Function call to initialize app
 init();
